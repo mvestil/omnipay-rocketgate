@@ -24,7 +24,7 @@
   "repositories": [
     {
       "url": "https://github.com/mvestil/rocketgate-php-sdk",
-      "type": "git"
+      "type": "vcs"
     }
   ],
   "require": {
