@@ -7,8 +7,11 @@ use Omnipay\Common\AbstractGateway;
 /**
  * RocketGate Gateway
  *
- * RocketGate is the revolutionary new payments gateway with seamless integration and global scalability that
- * continuously evolves with the industry.
+ * RocketGate is an industry leader in transaction processing.
+ * RocketGate's secure, fault-tolerant and reliable payment processing platform includes a suite of
+ * sophisticated features including chargeback processing, risk management,
+ * advanced processing and merchant support tools. RocketGate's platform is engineered to be fast,
+ * customizable and profitable for our business partners.
  *
  * ### Example
  * <code>

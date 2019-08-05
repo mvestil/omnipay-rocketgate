@@ -10,6 +10,8 @@ use RocketGate\Sdk\GatewayResponse;
 /**
  * Class Response
  *
+ * This class is for retrieving responses from RocketGate API
+ *
  * @date      2019-08-02
  * @author    markbonnievestil
  * @copyright Copyright (c) Infostream Group
