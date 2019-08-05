@@ -1,5 +1,5 @@
 {
-  "name": "mvestil/omnipay-inoviopay",
+  "name": "mvestil/omnipay-rocketgate",
   "type": "library",
   "description": "RocketGate driver for the Omnipay payment processing library",
   "keywords": [
