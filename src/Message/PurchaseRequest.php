@@ -26,11 +26,11 @@ namespace Omnipay\RocketGate\Message;
  *     'expiryYear'      => '2032',
  *     'cvv'             => '123',
  *     'email'           => 'customer@example.com',
- *     'billingAddress1' => 'Mary',
+ *     'billingAddress1' => 'Consolacion, Cebu',
  *     'billingCountry'  => 'SG',
- *     'billingCity'     => 'Singapore',
+ *     'billingCity'     => 'Philippines',
  *     'billingPostcode' => '567278',
- *     'billingState'    => 'Singapore',
+ *     'billingState'    => 'Philippines',
  * ));
  *
  * // Do a purchase transaction on the gateway
@@ -46,9 +46,7 @@ namespace Omnipay\RocketGate\Message;
  * if ($response->isSuccessful()) {
  *     echo "Purchase transaction was successful!\n";
  *     $token = $response->getCardReference();
- *     $customerToken = $response->getCustomerReference();
  *     echo "Card reference = " . $token . "\n";
- *     echo "Customer reference = " . $customerToken . "\n";
  * }
  * </code>
  *
