@@ -1,0 +1,34 @@
+{
+  "name": "mvestil/omnipay-inoviopay",
+  "type": "library",
+  "description": "RocketGate driver for the Omnipay payment processing library",
+  "keywords": [
+    "gateway",
+    "merchant",
+    "omnipay",
+    "pay",
+    "payment",
+    "rocketgate"
+  ],
+  "homepage": "https://github.com/mvestil/omnipay-rocketgate",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mark Bonnie Vestil",
+      "email": "mbvestil@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": { "Omnipay\\RocketGate\\" : "src/" }
+  },
+  "repositories": [
+    {
+      "url": "https://github.com/mvestil/rocketgate-php-sdk",
+      "type": "git"
+    }
+  ],
+  "require": {
+    "omnipay/common": "~2.0",
+    "rocketgate/rocketgate-php-sdk": "dev-master"
+  }
+}
