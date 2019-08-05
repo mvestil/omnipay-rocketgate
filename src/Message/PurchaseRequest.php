@@ -2,8 +2,6 @@
 
 namespace Omnipay\RocketGate\Message;
 
-use RocketGate\Sdk\GatewayService;
-
 /**
  * Class PurchaseRequest
  *

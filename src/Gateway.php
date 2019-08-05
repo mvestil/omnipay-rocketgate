@@ -1,16 +1,4 @@
 <?php
-/**
- * Class ${NAME}
- *
- * @date      2019-08-02
- * @author    markbonnievestil
- * @copyright Copyright (c) Infostream Group
- */
-
-
-/**
- * RocketGate Gateway
- */
 
 namespace Omnipay\RocketGate;
 
@@ -19,7 +7,7 @@ use Omnipay\Common\AbstractGateway;
 /**
  * RocketGate Gateway
  *
- * Inovio is the revolutionary new payments gateway with seamless integration and global scalability that
+ * RocketGate is the revolutionary new payments gateway with seamless integration and global scalability that
  * continuously evolves with the industry.
  *
  * ### Example
