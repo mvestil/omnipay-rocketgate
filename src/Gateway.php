@@ -32,11 +32,11 @@ use Omnipay\Common\AbstractGateway;
  *     'expiryYear'      => '2032',
  *     'cvv'             => '123',
  *     'email'           => 'customer@example.com',
- *     'billingAddress1' => 'Mary',
- *     'billingCountry'  => 'SG',
- *     'billingCity'     => 'Singapore',
+ *     'billingAddress1' => 'Consolacion, Cebu',
+ *     'billingCountry'  => 'PH',
+ *     'billingCity'     => 'Philippines',
  *     'billingPostcode' => '567278',
- *     'billingState'    => 'Singapore',
+ *     'billingState'    => 'Philippines',
  * ));
  *
  * // Do a purchase transaction on the gateway
