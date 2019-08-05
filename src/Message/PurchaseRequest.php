@@ -56,15 +56,16 @@ namespace Omnipay\RocketGate\Message;
  *
  * To obtain a card reference (the cardReference parameter) a previous purchase
  * call must be completed successfully.  After the successful completion, check
- * the result of getCardReference & getCustomerReference on the response:
+ * the result of getCardReference() on the response:
  *
  * <code>
  * // Do a Token transaction on the gateway
  * $transaction = $gateway->purchase(array(
- *     'amount'            => '50.0',
- *     'currency'          => 'USD',
- *     'cardReference'     => $token, // pmt_id from the response of the previous purchase
- *     'customerReference' => $customerToken, // cust_id from the response of the previous purchase
+ *     'amount'        => '50.0',
+ *     'currency'      => 'USD',
+ *     'transactorId'  => random_int(0, 1000000000),
+ *     'transactionId' => random_int(0, 1000000000),
+ *     'cardReference' => $response->getCardReference(),
  * ));
  *
  * $response = $transaction->send();
