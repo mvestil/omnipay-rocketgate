@@ -27,12 +27,9 @@ use Omnipay\Common\AbstractGateway;
  * // Initialize the gateway
  * $gateway = Omnipay::create('RocketGate');
  * $gateway->initialize(array(
- *     'reqUsername' => 'XXXXXXXXXXXX',
- *     'reqPassword' => 'XXXXXXXXXXXX',
- *     'siteId'      => '64557',
- *     'merchAcctId' => '66824',
- *     'testMode'    => true,
- *     'productId'   => 85299,
+ *     'merchantId'       => 'XXXXXXXXXXXX',
+ *     'merchantPassword' => 'XXXXXXXXXXXX',
+ *     'testMode'         => true,
  * ));
  *
  * // Create a credit card object
@@ -56,7 +53,8 @@ use Omnipay\Common\AbstractGateway;
  *     'amount'      => '50.00',
  *     'currency'    => 'USD',
  *     'card'        => $card,
- *     'transactionId' => random_int(0, 1000000000),
+ *      'transactorId'  => random_int(0, 1000000000),
+ *      'transactionId' => random_int(0, 1000000000),
  * ));
  *
  * $response = $transaction->send();

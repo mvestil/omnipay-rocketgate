@@ -51,23 +51,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     }
 
     /**
-     * @return mixed
-     */
-    public function getCustomerReference()
-    {
-        return $this->getParameter('customerReference');
-    }
-
-    /**
-     * @param $value
-     * @return \Omnipay\Common\Message\AbstractRequest
-     */
-    public function setCustomerReference($value)
-    {
-        return $this->setParameter('customerReference', $value);
-    }
-
-    /**
      * {@inheritdoc}
      *
      * @throws \Exception

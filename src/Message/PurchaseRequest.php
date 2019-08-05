@@ -40,6 +40,7 @@ use RocketGate\Sdk\GatewayService;
  *     'amount'      => '50.00',
  *     'currency'    => 'USD',
  *     'card'        => $card,
+ *     'transactorId'  => random_int(0, 1000000000),
  *     'transactionId' => random_int(0, 1000000000),
  * ));
  *
