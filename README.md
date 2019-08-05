@@ -1,4 +1,4 @@
-# omnipay-RocketGate
+# omnipay-rocketgate
 Omnipay driver for RocketGate Gateway
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
