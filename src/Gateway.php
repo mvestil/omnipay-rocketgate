@@ -41,11 +41,11 @@ use Omnipay\Common\AbstractGateway;
  *
  * // Do a purchase transaction on the gateway
  * $transaction = $gateway->purchase(array(
- *     'amount'      => '50.00',
- *     'currency'    => 'USD',
- *     'card'        => $card,
- *      'transactorId'  => random_int(0, 1000000000),
- *      'transactionId' => random_int(0, 1000000000),
+ *     'amount'        => '50.00',
+ *     'currency'      => 'USD',
+ *     'card'          => $card,
+ *     'transactorId'  => random_int(0, 1000000000),
+ *     'transactionId' => random_int(0, 1000000000),
  * ));
  *
  * $response = $transaction->send();
