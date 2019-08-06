@@ -21,14 +21,7 @@
   "autoload": {
     "psr-4": { "Omnipay\\RocketGate\\" : "src/" }
   },
-  "repositories": [
-    {
-      "url": "https://github.com/mvestil/rocketgate-php-sdk",
-      "type": "vcs"
-    }
-  ],
   "require": {
-    "omnipay/common": "~2.0",
-    "rocketgate/rocketgate-php-sdk": "dev-master"
+    "omnipay/common": "~2.0"
   }
 }
