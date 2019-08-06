@@ -67,7 +67,7 @@ class Response extends AbstractResponse implements RedirectResponseInterface
      */
     public function getMessage()
     {
-        return $this->response->Get(GatewayResponse::EXCEPTION());
+        return $this->response->Get(GatewayResponse::REASON_CODE());
     }
 
     /**
