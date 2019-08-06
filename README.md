@@ -8,6 +8,7 @@ processing library for PHP 5.3+. This package implements PaymentWall support for
 RocketGate's secure, fault-tolerant and reliable payment processing platform includes a suite of
  sophisticated features including chargeback processing, risk management, advanced processing 
  and merchant support tools. RocketGate's platform is engineered to be fast, customizable and profitable for our business partners.
+
 ## Installation
 
 Omnipay is installed via [Composer](http://getcomposer.org/). To install, simply add it
@@ -49,7 +50,7 @@ To call RocketGate Payments API, merchant id and merchant password is required a
 via RocketGate's PHP SDK. You can get these values from RocketGate itself can be seen in their admin portal.
 
 ## Usage
- 
+
 ```
 // Initialize the gateway
 $gateway = Omnipay::create('RocketGate');

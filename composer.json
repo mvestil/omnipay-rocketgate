@@ -1,5 +1,5 @@
 {
-  "name": "mvestil/omnipay-inoviopay",
+  "name": "mvestil/omnipay-rocketgate",
   "type": "library",
   "description": "RocketGate driver for the Omnipay payment processing library",
   "keywords": [
@@ -24,7 +24,7 @@
   "repositories": [
     {
       "url": "https://github.com/mvestil/rocketgate-php-sdk",
-      "type": "git"
+      "type": "vcs"
     }
   ],
   "require": {
