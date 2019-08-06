@@ -126,8 +126,13 @@ class PurchaseRequest extends AbstractRequest
             $data['MERCHANT_CUSTOMER_ID'] = $this->getTransactorId();
         }
 
+        // by default ignore, a new parameter must be passed if you need to support these
+        $data['SCRUB']     = "IGNORE";
+        $data['AVS_CHECK'] = "IGNORE";
+
         if ($this->getCardReference()) {
-            $data['CARD_HASH'] = $this->getCardReference();
+            $data['CVV2_CHECK'] = "IGNORE";
+            $data['CARD_HASH']  = $this->getCardReference();
         } else {
             $this->validate('card');
             $card = $this->getCard();
@@ -145,8 +150,6 @@ class PurchaseRequest extends AbstractRequest
             $data['EXPIRE_MONTH']       = $card->getExpiryMonth();
             $data['EXPIRE_YEAR']        = $card->getExpiryYear();
 
-            $data['SCRUB']      = "IGNORE";
-            $data['AVS_CHECK']  = "IGNORE";
             $data['CVV2_CHECK'] = "YES";
         }
 
