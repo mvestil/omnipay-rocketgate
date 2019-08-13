@@ -23,6 +23,6 @@
   },
   "require": {
     "omnipay/common": "~2.0",
-    "rocketgate/rocketgate-php-sdk": "v0.0.2"
+    "rocketgate/sdk": "v0.0.2"
   }
 }
