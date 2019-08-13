@@ -22,6 +22,7 @@
     "psr-4": { "Omnipay\\RocketGate\\" : "src/" }
   },
   "require": {
-    "omnipay/common": "~2.0"
+    "omnipay/common": "~2.0",
+    "rocketgate/rocketgate-php-sdk": "v0.0.2"
   }
 }
