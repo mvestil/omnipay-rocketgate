@@ -16,11 +16,16 @@ class VoidRequest extends AbstractRequest
     {
         $data = parent::getData();
 
-        // TODO
+        $this->validate('transactionReference');
+
+        $data['TRANSACT_ID'] = $this->getTransactionReference();
 
         return $data;
     }
 
+    /**
+     * @inheritDoc
+     */
     public function serviceMethod()
     {
         return 'PerformVoid';

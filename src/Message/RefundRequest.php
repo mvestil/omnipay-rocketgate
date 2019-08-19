@@ -9,21 +9,25 @@ namespace Omnipay\RocketGate\Message;
  * @author    markbonnievestil
  * @copyright Copyright (c) Infostream Group
  */
-
 class RefundRequest extends AbstractRequest
 {
     public function getData()
     {
         $data = parent::getData();
 
-        // TODO
+        $this->validate('transactionReference', 'amount');
+
+        $data['TRANSACT_ID'] = $this->getTransactionReference();
+        $data['AMOUNT']      = $this->getAmount();
 
         return $data;
     }
 
+    /**
+     * @inheritDoc
+     */
     public function serviceMethod()
     {
         return 'PerformCredit';
     }
-
 }

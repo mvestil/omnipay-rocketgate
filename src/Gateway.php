@@ -129,4 +129,26 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\RocketGate\Message\PurchaseRequest', $parameters);
     }
+
+    /**
+     * Create a refund request.
+     *
+     * @param array $parameters
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function refund(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\RocketGate\Message\RefundRequest', $parameters);
+    }
+
+    /**
+     * Create a refund request.
+     *
+     * @param array $parameters
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function void(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\RocketGate\Message\VoidRequest', $parameters);
+    }
 }

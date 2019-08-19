@@ -77,7 +77,7 @@ $card = new CreditCard(array(
 ));
 
 // Do a purchase transaction on the gateway
-$transactorId = random_int(0, 1000000000)
+$transactorId = random_int(0, 1000000000);
 $transaction = $gateway->purchase(array(
   'amount'        => '50.00',
   'currency'      => 'USD',
