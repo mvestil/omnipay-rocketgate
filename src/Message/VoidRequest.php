@@ -6,8 +6,7 @@ namespace Omnipay\RocketGate\Message;
  * Class ${NAME}
  *
  * @date      2019-08-08
- * @author    markbonnievestil
- * @copyright Copyright (c) Infostream Group
+ * @author    markbonnievestil (mbvestil@gmail.com)
  */
 
 class VoidRequest extends AbstractRequest
