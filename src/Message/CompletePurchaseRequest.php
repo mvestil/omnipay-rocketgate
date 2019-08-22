@@ -35,6 +35,8 @@ class CompletePurchaseRequest extends PurchaseRequest
 
         $data['TRANSACT_ID'] = $this->getTransactionReference();
         $data['PARES']       = $this->getPares();
+
+        return $data;
     }
 
     /**
