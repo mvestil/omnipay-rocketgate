@@ -1,6 +1,5 @@
 <?php
-
-use Omnipay\RocketGate\Message\PurchaseRequest;
+namespace Omnipay\RocketGate\Message;
 
 /**
  * Class ProceedPurchase
@@ -15,7 +14,7 @@ use Omnipay\RocketGate\Message\PurchaseRequest;
  * @author    markbonnievestil (mbvestil@gmail.com)
  */
 
-class ProceedPurchase extends PurchaseRequest
+class ProceedPurchaseRequest extends PurchaseRequest
 {
     /**
      * @return array
