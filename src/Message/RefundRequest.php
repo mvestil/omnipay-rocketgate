@@ -10,6 +10,10 @@ namespace Omnipay\RocketGate\Message;
  */
 class RefundRequest extends AbstractRequest
 {
+    /**
+     * @return array
+     * @throws \Omnipay\Common\Exception\InvalidRequestException
+     */
     public function getData()
     {
         $data = parent::getData();

@@ -27,14 +27,19 @@ class CompletePurchaseRequest extends PurchaseRequest
         return $this->setParameter('pares', $value);
     }
 
+    /**
+     * @return array
+     * @throws \Omnipay\Common\Exception\InvalidRequestException
+     */
     public function getData()
     {
         $this->validate('transactionReference', 'pares');
 
         $data = parent::getData();
 
-        $data['TRANSACT_ID'] = $this->getTransactionReference();
-        $data['PARES']       = $this->getPares();
+        $data['TRANSACT_ID']   = $this->getTransactionReference();
+        $data['PARES']         = $this->getPares();
+        $data['USE_3D_SECURE'] = 'FALSE';
 
         return $data;
     }

@@ -162,4 +162,15 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\RocketGate\Message\CompletePurchaseRequest', $parameters);
     }
+
+    /**
+     * Create a proceed purchase request.
+     *
+     * @param array $parameters
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function proceedPurchase(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\RocketGate\Message\ProceedPurchaseRequest', $parameters);
+    }
 }
