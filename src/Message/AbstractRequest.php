@@ -95,6 +95,8 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         $data = array(
             'MERCHANT_ID'       => $this->getMerchantId(),
             'MERCHANT_PASSWORD' => $this->getMerchantPassword(),
+            // by default supports Callbacks
+            'GENERATE_POSTBACK' => "TRUE",
         );
 
         return $data;
