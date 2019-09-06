@@ -106,6 +106,23 @@ class Gateway extends AbstractGateway
     }
 
     /**
+     * @return string
+     */
+    public function getGeneratePostBack()
+    {
+        return $this->getParameter('generatePostBack');
+    }
+
+    /**
+     * @param $value
+     * @return $this
+     */
+    public function setGeneratePostBack($value)
+    {
+        return $this->setParameter('generatePostBack', $value);
+    }
+
+    /**
      * Get default parameters
      *
      * @return array
@@ -116,6 +133,7 @@ class Gateway extends AbstractGateway
             'merchantId'       => '',
             'merchantPassword' => '',
             'testMode'         => false,
+            'generatePostBack' => true,
         );
     }
 
