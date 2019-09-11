@@ -103,9 +103,8 @@ $transaction = $gateway->purchase(array(
 ));
 ```
 
-## Unit Testing
-
-Tests are not yet included
+## TODO
+* Unit Testing
 
 ## Support
 
