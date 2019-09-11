@@ -106,6 +106,23 @@ class Gateway extends AbstractGateway
     }
 
     /**
+     * @return string
+     */
+    public function getGeneratePostBack()
+    {
+        return $this->getParameter('generatePostBack');
+    }
+
+    /**
+     * @param $value
+     * @return $this
+     */
+    public function setGeneratePostBack($value)
+    {
+        return $this->setParameter('generatePostBack', $value);
+    }
+
+    /**
      * Get default parameters
      *
      * @return array
@@ -116,6 +133,7 @@ class Gateway extends AbstractGateway
             'merchantId'       => '',
             'merchantPassword' => '',
             'testMode'         => false,
+            'generatePostBack' => true,
         );
     }
 
@@ -128,5 +146,49 @@ class Gateway extends AbstractGateway
     public function purchase(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\RocketGate\Message\PurchaseRequest', $parameters);
+    }
+
+    /**
+     * Create a refund request.
+     *
+     * @param array $parameters
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function refund(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\RocketGate\Message\RefundRequest', $parameters);
+    }
+
+    /**
+     * Create a refund request.
+     *
+     * @param array $parameters
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function void(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\RocketGate\Message\VoidRequest', $parameters);
+    }
+
+    /**
+     * Complete a purchase request.
+     *
+     * @param array $parameters
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function completePurchase(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\RocketGate\Message\CompletePurchaseRequest', $parameters);
+    }
+
+    /**
+     * Create a proceed purchase request.
+     *
+     * @param array $parameters
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function proceedPurchase(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\RocketGate\Message\ProceedPurchaseRequest', $parameters);
     }
 }
