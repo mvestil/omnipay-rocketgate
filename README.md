@@ -17,7 +17,7 @@ to your `composer.json` file:
 ```json
 {
     "require": {
-        "mvestil/omnipay-rocketgate": "~1.0"
+        "mvestil/omnipay-rocketgate": "~1.1"
     }
 }
 ```
