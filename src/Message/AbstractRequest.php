@@ -51,6 +51,23 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     }
 
     /**
+     * @return string
+     */
+    public function getGeneratePostBack()
+    {
+        return $this->getParameter('generatePostBack');
+    }
+
+    /**
+     * @param $value
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function setGeneratePostBack($value)
+    {
+        return $this->setParameter('generatePostBack', $value);
+    }
+
+    /**
      * {@inheritdoc}
      *
      * @throws \Exception
@@ -95,6 +112,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         $data = array(
             'MERCHANT_ID'       => $this->getMerchantId(),
             'MERCHANT_PASSWORD' => $this->getMerchantPassword(),
+            'GENERATE_POSTBACK' => $this->getGeneratePostBack(),
         );
 
         return $data;

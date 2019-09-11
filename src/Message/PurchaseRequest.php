@@ -127,11 +127,11 @@ class PurchaseRequest extends AbstractRequest
         }
 
         // by default ignore, a new parameter must be passed if you need to support these
-        $data['SCRUB']     = "IGNORE";
-        $data['AVS_CHECK'] = "IGNORE";
+        $data['SCRUB'] = "IGNORE";
 
         if ($this->getCardReference()) {
-            $data['CVV2_CHECK'] = "IGNORE";
+            $data['CVV2_CHECK'] = "NO";
+            $data['AVS_CHECK']  = "NO";
             $data['CARD_HASH']  = $this->getCardReference();
         } else {
             $this->validate('card');
@@ -151,6 +151,10 @@ class PurchaseRequest extends AbstractRequest
             $data['EXPIRE_YEAR']        = $card->getExpiryYear();
 
             $data['CVV2_CHECK'] = "YES";
+            $data['AVS_CHECK']  = "IGNORE";
+
+            // use 3ds as much as possible
+            $data['USE_3D_SECURE'] = "TRUE";
         }
 
         return $data;

@@ -13,8 +13,7 @@ use RocketGate\Sdk\GatewayResponse;
  * This class is for retrieving responses from RocketGate API
  *
  * @date      2019-08-02
- * @author    markbonnievestil
- * @copyright Copyright (c) Infostream Group
+ * @author    markbonnievestil (mbvestil@gmail.com)
  */
 
 class Response extends AbstractResponse implements RedirectResponseInterface
@@ -91,7 +90,15 @@ class Response extends AbstractResponse implements RedirectResponseInterface
      */
     public function isRedirect()
     {
-        return $this->getRedirectUrl() !== null;
+        return $this->getReasonCode() == '202';
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getReasonCode()
+    {
+        return $this->response->Get(GatewayResponse::REASON_CODE());
     }
 
     /**
@@ -107,7 +114,7 @@ class Response extends AbstractResponse implements RedirectResponseInterface
      */
     public function getRedirectMethod()
     {
-        return 'GET';
+        return 'POST';
     }
 
     /**
