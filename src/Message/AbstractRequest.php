@@ -68,6 +68,23 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     }
 
     /**
+     * @return string
+     */
+    public function getUse3DSecure()
+    {
+        return $this->getParameter('use3DSecure');
+    }
+
+    /**
+     * @param $value
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function setUse3DSecure($value)
+    {
+        return $this->setParameter('use3DSecure', $value);
+    }
+
+    /**
      * {@inheritdoc}
      *
      * @throws \Exception
@@ -113,6 +130,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             'MERCHANT_ID'       => $this->getMerchantId(),
             'MERCHANT_PASSWORD' => $this->getMerchantPassword(),
             'GENERATE_POSTBACK' => $this->getGeneratePostBack(),
+            'USE_3D_SECURE'     => $this->getUse3DSecure(),
         );
 
         return $data;
