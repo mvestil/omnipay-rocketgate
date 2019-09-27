@@ -97,6 +97,23 @@ class PurchaseRequest extends AbstractRequest
     }
 
     /**
+     * @return string
+     */
+    public function getUse3DSecure()
+    {
+        return $this->getParameter('use3DSecure');
+    }
+
+    /**
+     * @param $value
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function setUse3DSecure($value)
+    {
+        return $this->setParameter('use3DSecure', $value);
+    }
+
+    /**
      * Prepare the data to be set to RocketGate's SDK
      *
      * Note : Each array key is the method name in RocketGates SDK
@@ -152,6 +169,8 @@ class PurchaseRequest extends AbstractRequest
 
             $data['CVV2_CHECK'] = "YES";
             $data['AVS_CHECK']  = "IGNORE";
+
+            $data['USE_3D_SECURE'] = $this->getUse3DSecure();
         }
 
         return $data;
