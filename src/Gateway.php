@@ -123,6 +123,23 @@ class Gateway extends AbstractGateway
     }
 
     /**
+     * @return string
+     */
+    public function getUse3DSecure()
+    {
+        return $this->getParameter('use3DSecure');
+    }
+
+    /**
+     * @param $value
+     * @return $this
+     */
+    public function setUse3DSecure($value)
+    {
+        return $this->setParameter('use3DSecure', $value);
+    }
+
+    /**
      * Get default parameters
      *
      * @return array
@@ -134,6 +151,7 @@ class Gateway extends AbstractGateway
             'merchantPassword' => '',
             'testMode'         => false,
             'generatePostBack' => true,
+            'use3DSecure'      => false,
         );
     }
 

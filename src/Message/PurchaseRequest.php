@@ -152,9 +152,6 @@ class PurchaseRequest extends AbstractRequest
 
             $data['CVV2_CHECK'] = "YES";
             $data['AVS_CHECK']  = "IGNORE";
-
-            // use 3ds as much as possible
-            $data['USE_3D_SECURE'] = "TRUE";
         }
 
         return $data;
